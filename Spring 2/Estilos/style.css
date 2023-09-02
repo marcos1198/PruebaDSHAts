@@ -1,258 +1,127 @@
-/* Acá vamos a crear el Root, es donde estan las reglas principales del CSS como los colores a utilizar */
-:root{
-    --c-dark: #212529;
-    --c-brand: #b71c1c;
-    --c-brand-light: #f64d40;
-    --c-brand-dark: #7a1616;
-    --c-green: #8bc34a;
-    --font-base: "Montserrat", montserrat;
-    --box-shadow: 0px 15px 25px rgba(0,0,0,0.8);
-    --transition: all 0.5 ease;
-}
-*{
-    margin: 0;
-    padding: 0;
+.{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
     box-sizing: border-box;
-    font-family: var(--font-base);
-}   
-body{
-    line-height: 1.7;
+}
+.header{
+    background-color: blue;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+}
+.nav-link {
     color: white;
-}
-hr{
-    border-width: .5vh;
-    padding-bottom: 1vh;
-}
-a{
     text-decoration: none;
-    color: white;
-    transition: var(---transition);
 }
-a:hover{
-    color: var(--c-brand-light);
+.logo {
+    font-size: 30px;
+    padding: 0 40px;
+    line-height: 80px;
+ 
 }
-img{
-    max-width: 100%;
-    height:auto;
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
 }
-.navbar{
-    background-color: var(--c-brand);
+.nav-menu-item{
+    font-size: 19px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.nav-menu-link:hover {
+    background-color: antiquewhite;
+    transition: 0.5s;
+}
+button{
+    appearance: auto;
+    text-align: center;
+    border-width: 2px;
+}
+.boton{
+    
+}
+.loginbtn{
+    font-size: 19px;
+    background-color: yellowgreen;
+    color: #fff;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* .navbar{
+    background-color: wheat;
     padding: 1.5vh 0vh 1.5vh 0vh;
+} */
+
+
+
+body{
+    height: 100vh;;
+    width:100%;
+    position:relative;
+    font-family: sans-serif;
+    padding: 90px 20px 0;
 }
-.navbar img{
-    width:15vh;
+
+.footer23{
+    width:100%;
+    position:absolute;
+    bottom:0;
+   
+    padding: 50px;
+    background-color: #A52326;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.navbar-collapse a{
-    color: white;
-    margin-left: 2vh;
+.social-icons-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
-.hidden-footer{
-    width: 100%;
-    padding: 1.5vh 16vh 1.5vh 16vh;
-}
-.hidden-footer img{
-    width: 5vh;
-    padding-bottom:1vh;
-}
-#hidden{
-    background-color: white;
-}
-#hero {
+.social-icon{
+    height: 50px;
+    width:50px ;
+    border-radius: 50px;
+    background-image: url(Resourse/instagramBlanco.png);
     background-position: center;
-    background-size: cover;
-    /* background-image: url(./assets/images/hero-1.jpg); */
 
 }
-#hero h1, #hero h2{
-    filter: drop-shadow(3px 3px 3px #000);
+.social-icon:hover{
+    background-color: #FFFF;
+    filter:invert(1);
+    
 }
-#hero h1{
-    font-size: 8vh;
+.social-icon:nth-of-type(2){
+    background-image: url(Resouces/facebookBlanco.png);
 }
-#hero > h2{
-    font-size: 8vh;
-}
-#cards{
-    margin-top: -60px;
-}
-.cardset {
-    background-color: var(--c-brand);
-    padding: 0vh 15vh 8vh 15vh;
-}
-.imagecard{
-    padding: 0;
-}
-.image {
+.pie{
+    background-color: #4D4D4D;
+    text-align: center;
     width: 100%;
-    height: 100%;
-}
-.cardtext{
-    margin: 3vh;
-}
-p{
-    font-size:calc(1px + 2vh);
-}
-footer{
-    background-color: var(--c-brand);
-    padding: 0vh 15vh 8vh 15vh;
-    color:white;
-}
-footer img{
-    width: 3vh;
-    height: 4vh;
-}
-
-
-/* CONTACTO */
-
-.contact {
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(./assets/images/contacto.jpg);
-    overflow: auto;
-    position: relative;    
-}
-
-.formulario {
-    max-width: max-content;
-    margin: auto;
-}
-.formulario label{
-    padding-left: 1rem;
-}
-
-.form-title {
-    color: white;
-    margin: 3rem 0;
-}
-
-.form-contact {
+    padding:1rem 8%;
     position: absolute;
-    top: 5rem;
+    bottom: 0;
+    
 }
-
-.form-row {
-    margin: 1rem 0;
-}
-
-.textarea {
-    width: 100%;
-    height: 8rem;
-    border-radius: .5rem;
-}
-
-.mensaje {
-    margin-top: .5rem;
-    padding: 0;
-}
-
-.form-button {
-    justify-content: end;
-}
-
-input {
-    border-radius: .5rem;
-}
-
-.button {
-    border: 1px solid var(--c-dark);
-    background-color: var(--c-brand);
-    color: white;
-    font-weight: bold;
-    padding: .8rem;
-}
-
-.button:hover {
-    background-color: var(--c-brand-light);
-}
-
-/* RESERVAS */
-
-.booking {
-    background-position: center;
-    background-size: cover;
-    background-image: url(./assets/images/contacto.jpg);
-    overflow: auto;
-    position: relative;
-}
-
-.form-booking {
-    background-color: var(--c-dark);
-    width: fit-content;
-    border-radius: .5rem;
-    padding: 1rem;
-    margin-top:5rem;
-}
-
-.form-booking h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.form {
-    margin: 1rem .5rem;
-}
-
-.name input {
-    width: 100%;
-}
-
-.button-booking input {
-    background-color: var(--c-brand);
-    color: white;
-    border: 1px solid var(--c-dark);
-    padding: .5rem;
-    margin-top: .5rem;
-}
-
-.button-booking input:hover {
-    background-color: var(--c-brand-light);
-}
-
-.error {
-    background-color: var(--c-brand);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 1rem;
-}
-
-.confirmacion {
-    background-color: var(--c-green);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 1rem;
-}
-
-
-@media (min-width: 769px) {
-    .cardtext {
-        margin-top: 5rem;
-        font-size: 2vh;
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    .formulario {
-        width: auto;
-        text-align: center;
-    }
-}
-
-/*Esta es una regla creada para no poder seleccionar el texto en los títulos, por cuestiones estéticas*/
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-  }
